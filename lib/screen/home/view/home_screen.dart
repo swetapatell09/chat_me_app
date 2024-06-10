@@ -128,10 +128,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         child: ListTile(
                           leading: CircleAvatar(
-                            radius: 30,
+                            radius: 20,
                             child: Text(
                               "${list[index].name!.substring(0, 1)}",
-                              style: const TextStyle(fontSize: 30),
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 20),
                             ),
                           ),
                           title: Text("${list[index].name}"),
