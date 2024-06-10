@@ -84,28 +84,38 @@ class _ChatScreenState extends State<ChatScreen> {
                               print(
                                   "${AuthHelper.helper.user!.uid} ${chatList[index].uid}");
 
-                              return Container(
-                                width: MediaQuery.sizeOf(context).width,
-                                alignment: chatList[index].uid ==
-                                        AuthHelper.helper.user!.uid
-                                    ? Alignment.centerRight
-                                    : Alignment.centerLeft,
+                              return InkWell(
+                                onTap: () async {
+                                  if (chatList[index].uid ==
+                                      AuthHelper.helper.user!.uid) {
+                                    await FireDBHelper.helper
+                                        .deleteMessage(chatList[index].id!);
+                                  }
+                                },
                                 child: Container(
-                                  margin: const EdgeInsets.all(10),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10),
-                                  decoration: BoxDecoration(
-                                      color: chatList[index].uid ==
-                                              AuthHelper.helper.user!.uid
-                                          ? Colors.green.shade200
-                                          : Colors.grey,
-                                      borderRadius: const BorderRadius.only(
-                                          bottomLeft: Radius.circular(5),
-                                          topLeft: Radius.circular(5),
-                                          topRight: Radius.circular(5))),
-                                  child: Text(
-                                    "${chatList[index].msg}",
-                                    style: const TextStyle(fontSize: 16),
+                                  width: MediaQuery.sizeOf(context).width,
+                                  alignment: chatList[index].uid ==
+                                          AuthHelper.helper.user!.uid
+                                      ? Alignment.centerRight
+                                      : Alignment.centerLeft,
+                                  child: Container(
+                                    margin: const EdgeInsets.all(10),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10),
+                                    decoration: BoxDecoration(
+                                        color: chatList[index].uid ==
+                                                AuthHelper.helper.user!.uid
+                                            ? Colors.green.shade200
+                                            : Colors.grey,
+                                        borderRadius: const BorderRadius.only(
+                                            bottomLeft: Radius.circular(5),
+                                            topLeft: Radius.circular(5),
+                                            topRight: Radius.circular(5))),
+                                    child: Text(
+                                      "${chatList[index].msg}",
+                                      style: const TextStyle(
+                                          fontSize: 16, color: Colors.black),
+                                    ),
                                   ),
                                 ),
                               );

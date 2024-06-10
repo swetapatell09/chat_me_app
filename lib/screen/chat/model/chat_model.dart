@@ -9,6 +9,7 @@ class ChatModel {
         date: m1['date'],
         msg: m1['msg'],
         docId: id,
-        uid: m1['uid']);
+        uid: m1['uid'],
+        id: id);
   }
 }

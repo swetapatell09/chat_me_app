@@ -107,4 +107,8 @@ class FireDBHelper {
     Map m1 = ds.data() as Map;
     cUser = ProfileModel.maptoModel(m1, ds.id);
   }
+
+  Future<void> deleteMessage(String uid) async {
+    await db.collection("chat").doc(chatId).collection("msg").doc(uid).delete();
+  }
 }

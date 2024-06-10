@@ -117,19 +117,19 @@ class _SignInScreenState extends State<SignInScreen> {
                       height: 40,
                       width: 120,
                       decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.black12,
                           borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Image.asset(
                             "assets/image/google_logo.png",
-                            height: 80,
-                            width: 35,
+                            height: 85,
+                            width: 40,
                           ),
                           const Text(
                             "Google",
-                            style: TextStyle(fontSize: 20, color: Colors.red),
+                            style: TextStyle(fontSize: 20),
                           )
                         ],
                       ),
