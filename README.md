@@ -22,6 +22,10 @@ experience for users. Whether connecting with friends, family, or colleagues, "F
   <img src="https://github.com/swetapatell09/chat_me_app/assets/165981407/3b65e55d-f9f9-4b01-93ac-097774b275ce" height="400px" width="200px"/>
   <img src="https://github.com/swetapatell09/chat_me_app/assets/165981407/50e4380a-d200-4de3-993c-38fb6392ea51" height="400px" width="200px"/>
 
-  https://github.com/swetapatell09/chat_me_app/assets/165981407/fb68781a-cbd6-4e40-958b-743b9acd886f
+
+https://github.com/swetapatell09/chat_me_app/assets/165981407/14d66c98-4fe4-4b87-bbc3-c154450dc151
+
+
+  
 
 </p>
